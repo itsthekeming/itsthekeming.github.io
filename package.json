@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "format": "prettier --write pages/**/*.{ts,tsx}",
-    "lint": "eslint pages/**/*.{ts,tsx}",
-    "lint:fix": "eslint pages/**/*.{ts,tsx} --fix",
+    "format": "prettier --write *.{ts,tsx}",
+    "lint": "eslint *.{ts,tsx}",
+    "lint:fix": "eslint *.{ts,tsx} --fix",
     "build": "next build",
     "start": "next start",
     "export": "next export"
@@ -18,7 +18,7 @@
     "react-dom": "17.0.1"
   },
   "lint-staged": {
-    "pages/**/*.{ts,tsx}": [
+    "*.{ts,tsx}": [
       "npm run format",
       "npm run lint:fix"
     ]
