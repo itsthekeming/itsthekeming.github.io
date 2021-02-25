@@ -1,7 +1,7 @@
 export default function Home() {
   return (
     <div className="flex flex-col justify-center items-center h-screen w-screen space-y-8 bg-gray-800 text-gray-200 text-center">
-      <h1 className="text-9xl">Hi</h1>
+      <h1 className="text-9xl">Hello</h1>
       <p className="text-4xl">I&apos;m Edward</p>
       <p className="text-4xl">This is my personal website</p>
       <p className="text-4xl">
