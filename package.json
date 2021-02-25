@@ -24,11 +24,6 @@
       "npm run lint:fix"
     ]
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "devDependencies": {
     "@types/node": "^14.14.31",
     "@types/react": "^17.0.2",
