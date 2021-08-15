@@ -1,12 +1,18 @@
-const defaultTheme = require("tailwindcss/defaultTheme");
+const defaultTheme = require('tailwindcss/defaultTheme')
 
 /** @type {import("@types/tailwindcss/tailwind-config").TailwindConfig } */
 module.exports = {
-  mode: "jit",
-  purge: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}"],
+  mode: 'jit',
+  purge: ['./src/**/*.tsx'],
   theme: {
     extend: {
-      fontFamily: { sans: ["Inter var", ...defaultTheme.fontFamily.sans] },
+      fontFamily: {
+        sans: ['Lato', ...defaultTheme.fontFamily.sans],
+        serif: ['Lora', ...defaultTheme.fontFamily.serif],
+      },
+      screens: {
+        print: { raw: 'print' },
+      },
     },
   },
-};
+}

@@ -1,7 +1,8 @@
-import { AppProps } from "next/app";
-import Head from "next/head";
-import "../styles/globals.css";
-import "@fontsource/inter";
+import { AppProps } from 'next/app'
+import Head from 'next/head'
+import 'tailwindcss/tailwind.css'
+import '@fontsource/lato'
+import '@fontsource/lora'
 
 function App({ Component, pageProps }: AppProps) {
   return (
@@ -14,7 +15,7 @@ function App({ Component, pageProps }: AppProps) {
         <Component {...pageProps} />
       </main>
     </>
-  );
+  )
 }
 
-export default App;
+export default App
