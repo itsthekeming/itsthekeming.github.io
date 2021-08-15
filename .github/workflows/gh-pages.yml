@@ -5,27 +5,31 @@ on:
     branches: [main]
   pull_request:
     branches: [main]
-
   workflow_dispatch:
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v2
 
-      - name: Setup Node
-        uses: actions/setup-node@v2.1.5
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+          cache: yarn
 
       - name: Install Dependencies
-        run: npm install
+        run: yarn install --frozen-lockfile
+
+      - name: Lint
+        run: yarn lint
 
       - name: Build
-        run: npm run build
+        run: yarn build
 
       - name: Export
-        run: npm run export
+        run: yarn export
 
       - name: GitHub Pages
         uses: crazy-max/ghaction-github-pages@v2.2.0
