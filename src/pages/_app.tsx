@@ -1,8 +1,8 @@
 import { AppProps } from 'next/app'
 import Head from 'next/head'
-import 'tailwindcss/tailwind.css'
-import '@fontsource/lato'
-import '@fontsource/lora'
+import 'styles/globals.css'
+import '@fontsource/noto-sans'
+import '@fontsource/noto-serif'
 
 function App({ Component, pageProps }: AppProps) {
   return (
