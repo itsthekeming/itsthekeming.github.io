@@ -257,6 +257,16 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@fontsource/arvo@^4.5.0":
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/@fontsource/arvo/-/arvo-4.5.0.tgz#64b7f780afaac185168778157682530614ee61c2"
+  integrity sha512-bzhjTyyEulNFoK5LdN2NpJKbH3qHR0SdQQNTnJ9ojJyljpeZAEKiP9rlkuX41jk6nsEN1S/RRtUgd1+sviv8Dg==
+
+"@fontsource/bitter@^4.5.0":
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/@fontsource/bitter/-/bitter-4.5.0.tgz#002bd1caf7ad96730aec9d758f7643f11db599d8"
+  integrity sha512-kDOQwzCrbq1TaG3ddDnKMmudgoIDiaVtvpw+QxZ5+/iYyV+87qFlOxgZQJUBrG90RR0uD0nbFEbfTiicH9IfWA==
+
 "@fontsource/lato@^4.5.0":
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/@fontsource/lato/-/lato-4.5.0.tgz#c248b083be330daafade76995fed9088d5b76c04"
@@ -266,6 +276,57 @@
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/@fontsource/lora/-/lora-4.5.0.tgz#1b230175236c35d13b3a69a346ca5b0e2df0dbcf"
   integrity sha512-4ThGnMFbktlQqsTW7kCdzT888esMFfnbHE9PJMQCtcP2JUIJXDQpxvmtlsio1AJBnvUxPxegAAp76Q8lm7t1VQ==
+
+"@fontsource/merriweather@^4.5.1":
+  version "4.5.1"
+  resolved "https://registry.yarnpkg.com/@fontsource/merriweather/-/merriweather-4.5.1.tgz#f082e0e1ea92b39f16191ce05834123cdbfce741"
+  integrity sha512-6tkVHWgoq9wOZXLBOdyK5l/iWDi5Wsq4CL6yJNTUyTr/652j4UjlhIt2WLJAW94Mx3ObHNCA6Mv+CeoKKVmlig==
+
+"@fontsource/noto-sans@^4.5.0":
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/@fontsource/noto-sans/-/noto-sans-4.5.0.tgz#179c71178678bf17e6018919c33b48ea895a86dd"
+  integrity sha512-pYg1hJtdRJFVPkp8zCVuk5Gy42PTEeQUZSqYZHac412qV3MgOnvregHVa8Og38Z16rM61ZYwxDpuseJqS08Ifw==
+
+"@fontsource/noto-serif@^4.5.0":
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/@fontsource/noto-serif/-/noto-serif-4.5.0.tgz#7889f553a61078b61f78e426536b4949c91bea0b"
+  integrity sha512-XleNA4T9nQwBYtjGTGaqQuWlCUtytcUSIG9lr85Ii71yGuUR9xIjHy5HAJ5/7sQGhI4ceXVmWjiq7adP/7z8TA==
+
+"@fontsource/roboto-slab@^4.5.0":
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/@fontsource/roboto-slab/-/roboto-slab-4.5.0.tgz#90f1b5e7902d95bb622dc89acf10fbbef3dbabe6"
+  integrity sha512-wGQFm94mI4dwVxVcpOs91jaA53jCym9ai17/JO2WNFGMRnd1cUZ3bmWeIrgjHZasF/WA4EXjwIireeTSLpJ4iw==
+
+"@fontsource/zilla-slab@^4.5.0":
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/@fontsource/zilla-slab/-/zilla-slab-4.5.0.tgz#d0e619bf954e14fb37fb139281447bb3b6ae5281"
+  integrity sha512-/nb3gq9FPBT1g0TeF34rQy6DZq5ra85hLpCjPho0eFsOwfVA4P6hykIOlzkXwRveOfWT+R/bs+5F4t3tJb8nrQ==
+
+"@fortawesome/fontawesome-common-types@^0.2.36":
+  version "0.2.36"
+  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-0.2.36.tgz#b44e52db3b6b20523e0c57ef8c42d315532cb903"
+  integrity sha512-a/7BiSgobHAgBWeN7N0w+lAhInrGxksn13uK7231n2m8EDPE3BMCl9NZLTGrj9ZXfCmC6LM0QLqXidIizVQ6yg==
+
+"@fortawesome/fontawesome-svg-core@^1.2.36":
+  version "1.2.36"
+  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-svg-core/-/fontawesome-svg-core-1.2.36.tgz#4f2ea6f778298e0c47c6524ce2e7fd58eb6930e3"
+  integrity sha512-YUcsLQKYb6DmaJjIHdDWpBIGCcyE/W+p/LMGvjQem55Mm2XWVAP5kWTMKWLv9lwpCVjpLxPyOMOyUocP1GxrtA==
+  dependencies:
+    "@fortawesome/fontawesome-common-types" "^0.2.36"
+
+"@fortawesome/free-brands-svg-icons@^5.15.4":
+  version "5.15.4"
+  resolved "https://registry.yarnpkg.com/@fortawesome/free-brands-svg-icons/-/free-brands-svg-icons-5.15.4.tgz#ec8a44dd383bcdd58aa7d1c96f38251e6fec9733"
+  integrity sha512-f1witbwycL9cTENJegcmcZRYyawAFbm8+c6IirLmwbbpqz46wyjbQYLuxOc7weXFXfB7QR8/Vd2u5R3q6JYD9g==
+  dependencies:
+    "@fortawesome/fontawesome-common-types" "^0.2.36"
+
+"@fortawesome/react-fontawesome@^0.1.15":
+  version "0.1.15"
+  resolved "https://registry.yarnpkg.com/@fortawesome/react-fontawesome/-/react-fontawesome-0.1.15.tgz#1450b838f905981d721bf07e14e3b52c0e9a91ed"
+  integrity sha512-/HFHdcoLESxxMkqZAcZ6RXDJ69pVApwdwRos/B2kiMWxDSAX2dFK8Er2/+rG+RsrzWB/dsAyjefLmemgmfE18g==
+  dependencies:
+    prop-types "^15.7.2"
 
 "@hapi/accept@5.0.2":
   version "5.0.2"
@@ -286,6 +347,11 @@
   version "9.2.0"
   resolved "https://registry.yarnpkg.com/@hapi/hoek/-/hoek-9.2.0.tgz#f3933a44e365864f4dad5db94158106d511e8131"
   integrity sha512-sqKVVVOe5ivCaXDWivIJYVSaEgdQK9ul7a4Kity5Iw7u9+wBAPbX1RMSnLLmp7O4Vzj0WOWwMAJsTL00xwaNug==
+
+"@heroicons/react@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@heroicons/react/-/react-1.0.3.tgz#4dae106c6019e3250e36401b55b599ad41a68273"
+  integrity sha512-wdzWbDiFKzeL6xFJsgY2PqvDkx4hFmQDpEFRVj872EA71XOjr8g0DQj5rHWm0y7LwfGOFL0eQmEiMbTyGNOnTQ==
 
 "@humanwhocodes/config-array@^0.5.0":
   version "0.5.0"

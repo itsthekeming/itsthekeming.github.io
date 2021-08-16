@@ -7,8 +7,11 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Lato', ...defaultTheme.fontFamily.sans],
-        serif: ['Lora', ...defaultTheme.fontFamily.serif],
+        sans: ['Noto Sans', ...defaultTheme.fontFamily.sans],
+        serif: ['Noto Serif', ...defaultTheme.fontFamily.serif],
+      },
+      backgroundImage: {
+        chevron: 'url(/chevron-right.svg)',
       },
       screens: {
         print: { raw: 'print' },
