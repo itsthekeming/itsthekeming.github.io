@@ -54,7 +54,7 @@
         "Developed line-of-business applications and system integrations.",
         "Improved development processes by encouraging and implementing best practices in project management, change management, documentation, and TDD.",
         "Built an automated order processor that saved one team forty hours of work every week by leveraging automated PDF generation and synchronizing data across multiple systems.",
-        "Created an application that helped internal user send personalized text messages to customers using the Twilio and Microsoft Graph APIs.",
+        "Created an application that helped internal users send personalized text messages to customers using the Twilio and Microsoft Graph APIs.",
         "Designed and implemented the first version of an in-house customer management system."
       ]
     },
