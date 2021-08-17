@@ -6,7 +6,7 @@
     "email": "esanders@hey.com",
     "phone": "(405) 243-7303",
     "url": "https://esanders.dev",
-    "summary": "Imaginative, curious, and resourceful software engineer with full-stack experience. Primarily interested in front-end development and creating dynamic, intuitive, performant, and delightful user interfaces.\n Fascinated by the intersection of design and psychology. Always striving to improve software and the processes surrounding it.",
+    "summary": "Imaginative, curious, and resourceful software engineer with full-stack experience in a varied array of domains. Primarily interested in front-end development and creating dynamic, intuitive, performant, and delightful user interfaces.\n Fascinated by the intersection of design and psychology. Always striving to improve software and the processes surrounding it.",
     "location": {
       "city": "Pittsburgh",
       "region": "PA"
@@ -79,7 +79,6 @@
     { "name": "CSS" },
     { "name": "Test Driven Development" },
     { "name": "Pair Programming" },
-    { "name": "Web Accessibility" },
     { "name": "Design Systems" },
     { "name": "C#" },
     { "name": ".NET" },
