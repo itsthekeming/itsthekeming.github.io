@@ -1,18 +1,32 @@
+import Link from 'next/link'
+import React from 'react'
+
 export default function Home() {
   return (
-    <div className="flex flex-col justify-center items-center h-screen w-screen space-y-8 bg-gray-800 text-gray-200 text-center">
-      <h1 className="text-9xl">Hello</h1>
-      <p className="text-4xl">I&apos;m Edward</p>
-      <p className="text-4xl">This is my personal website</p>
-      <p className="text-4xl">
-        I&apos;ll be building it out over the coming months
-      </p>
-      <p className="text-4xl">For now, here&apos;s where you can find me:</p>
-      <span className="flex flex-row space-x-8 text-2xl underline active:text-gray-50">
-        <a href="https://twitter.com/itsthekeming">Twitter</a>
-        <a href="https://github.com/itsthekeming">GitHub</a>
-        <a href="https://www.linkedin.com/in/esanders1994/">LinkedIn</a>
-      </span>
+    <div className="flex flex-col justify-center items-center h-screen w-screen bg-gradient-to-tr from-[#00F260] to-[#0575E6] text-white/95">
+      <div className="flex flex-col items-center border-white/90 border-4 p-12 rounded-md">
+        <h1 className="text-6xl mb-12">Edward Sanders</h1>
+        <Link href="/resume" passHref>
+          <a className="underline text-3xl">Résumé</a>
+        </Link>
+        <div className="mt-12 flex space-x-8 text-xl">
+          <Link href="https://twitter.com/itsthekeming" passHref>
+            <a target="_blank" className="underline">
+              Twitter
+            </a>
+          </Link>
+          <Link href="https://github.com/itsthekeming" passHref>
+            <a target="_blank" className="underline">
+              GitHub
+            </a>
+          </Link>
+          <Link href="https://www.linkedin.com/in/esanders1994" passHref>
+            <a target="_blank" className="underline">
+              LinkedIn
+            </a>
+          </Link>
+        </div>
+      </div>
     </div>
-  );
+  )
 }
