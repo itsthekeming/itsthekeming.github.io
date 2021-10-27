@@ -257,51 +257,6 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@fontsource/arvo@^4.5.0":
-  version "4.5.0"
-  resolved "https://registry.yarnpkg.com/@fontsource/arvo/-/arvo-4.5.0.tgz#64b7f780afaac185168778157682530614ee61c2"
-  integrity sha512-bzhjTyyEulNFoK5LdN2NpJKbH3qHR0SdQQNTnJ9ojJyljpeZAEKiP9rlkuX41jk6nsEN1S/RRtUgd1+sviv8Dg==
-
-"@fontsource/bitter@^4.5.0":
-  version "4.5.0"
-  resolved "https://registry.yarnpkg.com/@fontsource/bitter/-/bitter-4.5.0.tgz#002bd1caf7ad96730aec9d758f7643f11db599d8"
-  integrity sha512-kDOQwzCrbq1TaG3ddDnKMmudgoIDiaVtvpw+QxZ5+/iYyV+87qFlOxgZQJUBrG90RR0uD0nbFEbfTiicH9IfWA==
-
-"@fontsource/lato@^4.5.0":
-  version "4.5.0"
-  resolved "https://registry.yarnpkg.com/@fontsource/lato/-/lato-4.5.0.tgz#c248b083be330daafade76995fed9088d5b76c04"
-  integrity sha512-Y1qluoF+5b2U6MWcEz70+euZwl4TEV+9v7nZCmuRgNHb5McYc3VmbNmYNEiLsnb1HHwlAHA70P/LktP9EJ61ag==
-
-"@fontsource/lora@^4.5.0":
-  version "4.5.0"
-  resolved "https://registry.yarnpkg.com/@fontsource/lora/-/lora-4.5.0.tgz#1b230175236c35d13b3a69a346ca5b0e2df0dbcf"
-  integrity sha512-4ThGnMFbktlQqsTW7kCdzT888esMFfnbHE9PJMQCtcP2JUIJXDQpxvmtlsio1AJBnvUxPxegAAp76Q8lm7t1VQ==
-
-"@fontsource/merriweather@^4.5.1":
-  version "4.5.1"
-  resolved "https://registry.yarnpkg.com/@fontsource/merriweather/-/merriweather-4.5.1.tgz#f082e0e1ea92b39f16191ce05834123cdbfce741"
-  integrity sha512-6tkVHWgoq9wOZXLBOdyK5l/iWDi5Wsq4CL6yJNTUyTr/652j4UjlhIt2WLJAW94Mx3ObHNCA6Mv+CeoKKVmlig==
-
-"@fontsource/noto-sans@^4.5.0":
-  version "4.5.0"
-  resolved "https://registry.yarnpkg.com/@fontsource/noto-sans/-/noto-sans-4.5.0.tgz#179c71178678bf17e6018919c33b48ea895a86dd"
-  integrity sha512-pYg1hJtdRJFVPkp8zCVuk5Gy42PTEeQUZSqYZHac412qV3MgOnvregHVa8Og38Z16rM61ZYwxDpuseJqS08Ifw==
-
-"@fontsource/noto-serif@^4.5.0":
-  version "4.5.0"
-  resolved "https://registry.yarnpkg.com/@fontsource/noto-serif/-/noto-serif-4.5.0.tgz#7889f553a61078b61f78e426536b4949c91bea0b"
-  integrity sha512-XleNA4T9nQwBYtjGTGaqQuWlCUtytcUSIG9lr85Ii71yGuUR9xIjHy5HAJ5/7sQGhI4ceXVmWjiq7adP/7z8TA==
-
-"@fontsource/roboto-slab@^4.5.0":
-  version "4.5.0"
-  resolved "https://registry.yarnpkg.com/@fontsource/roboto-slab/-/roboto-slab-4.5.0.tgz#90f1b5e7902d95bb622dc89acf10fbbef3dbabe6"
-  integrity sha512-wGQFm94mI4dwVxVcpOs91jaA53jCym9ai17/JO2WNFGMRnd1cUZ3bmWeIrgjHZasF/WA4EXjwIireeTSLpJ4iw==
-
-"@fontsource/zilla-slab@^4.5.0":
-  version "4.5.0"
-  resolved "https://registry.yarnpkg.com/@fontsource/zilla-slab/-/zilla-slab-4.5.0.tgz#d0e619bf954e14fb37fb139281447bb3b6ae5281"
-  integrity sha512-/nb3gq9FPBT1g0TeF34rQy6DZq5ra85hLpCjPho0eFsOwfVA4P6hykIOlzkXwRveOfWT+R/bs+5F4t3tJb8nrQ==
-
 "@fortawesome/fontawesome-common-types@^0.2.36":
   version "0.2.36"
   resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-0.2.36.tgz#b44e52db3b6b20523e0c57ef8c42d315532cb903"
