@@ -28,9 +28,6 @@ jobs:
       - name: Build
         run: yarn build
 
-      - name: Export
-        run: yarn export
-
       - name: GitHub Pages
         uses: crazy-max/ghaction-github-pages@v2.2.0
         with:
