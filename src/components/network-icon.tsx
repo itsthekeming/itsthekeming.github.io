@@ -1,24 +1,23 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithubAlt, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
+import {
+  IconDefinition,
+  faGithubAlt,
+  faLinkedinIn,
+} from '@fortawesome/free-brands-svg-icons'
+import { match } from 'ts-pattern'
 
 type NetworkIconProps = {
   network: string
 }
 
-export default function NetworkIcon({ network }: NetworkIconProps) {
-  let icon
+export function NetworkIcon({ network }: NetworkIconProps) {
+  const icon = match(network.toLowerCase())
+    .with('github', () => faGithubAlt)
+    .with('linkedin', () => faLinkedinIn)
+    .otherwise(() => null)
 
-  switch (network.toLowerCase()) {
-    case 'github':
-      icon = faGithubAlt
-      break
-    case 'linkedin':
-      icon = faLinkedinIn
-      break
-    default:
-      return null
-  }
+  if (icon === null) return null
 
   return (
     <FontAwesomeIcon

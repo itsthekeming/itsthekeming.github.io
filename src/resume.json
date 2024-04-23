@@ -2,11 +2,11 @@
   "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/schema.json",
   "basics": {
     "name": "Edward Sanders",
-    "label": "Software Engineer",
+    "label": "Creative and Collaborative Software Builder",
     "email": "esanders@hey.com",
     "phone": "(405) 243-7303",
     "url": "https://esanders.dev",
-    "summary": "Imaginative, curious, and resourceful software engineer with full-stack experience in a varied array of domains. Primarily interested in front-end development and creating dynamic, intuitive, performant, and delightful user interfaces.\n Fascinated by the intersection of design and psychology. Always striving to improve software and the processes surrounding it.",
+    "summary": "I am a collaborative and passionate full-stack developer with over 7 years of experience solving difficult and complex problems for customers and businesses. I thrive in cross-functional, product-oriented environments where I can work with other disciplines and stakeholders to quickly bring products to market. I have a proven track record of guiding teams to successful outcomes across diverse industries such as retail, medical billing, and learning management, employing a wide array of languages (TypeScript/JavaScript, Kotlin, C#), frameworks (React, Spring, .NET), persistence and streaming technologies (PostgreSQL, Redis, Kafka), and cloud technologies (Azure, Tanzu).",
     "location": {
       "city": "Pittsburgh",
       "region": "PA"
@@ -27,20 +27,31 @@
   "work": [
     {
       "name": "Dick's Sporting Goods",
-      "position": "Software Engineer II",
-      "startDate": "2020-09",
-      "location": "Pittsburgh, PA",
+      "position": "Senior Software Engineer",
+      "startDate": "2023-01",
       "url": "https://www.dickssportinggoods.com",
       "highlights": [
-        "Develop full-stack applications for internal users and customers, utilizing a diverse set of technologies and platforms.",
-        "Use test-driven development (TDD) and agile methodology to write and maintain extensible, reusable, and readable code.",
-        "Pair with other developers regularly so that code quality metrics are met or exceeded.",
-        "Utilize best practices in change management, continuous integration (CI), and continuous deployment (CD) to guarantee quick turnaround time on task completion.",
+        "Develop products to solve business problems with a wide variety of technologies.",
+        "Work with product managers, product designers, and business stakeholders to clarify business requirements and craft solutions.",
+        "Review pull requests and mentor junior developers.",
+        "Utilize CI/CD best practices and cloud technologies to build scalable and maintanable cloud native applications.",
+        "Thoroughly test and document code and processes.",
+        "Guide code standards by researching and introducing patterns and practices.",
+        "Lead Front-end Excellence group and Stores Design System initiatives.",
+        "Recognized as the Store Technology All-Star for Q4 FY2023 for my contributions to Front-end Excellence and Stores Design System work."
+      ]
+    },
+    {
+      "name": "Dick's Sporting Goods",
+      "position": "Software Engineer II",
+      "startDate": "2020-09",
+      "endDate": "2023-01",
+      "url": "https://www.dickssportinggoods.com",
+      "highlights": [
+        "Built and scaled an in-house appointment scheduling and management product used by nearly 300 stores and hundreds of thousands of customers.",
+        "Digitized paper forms, improving store labor performance.",
         "Gave a well-received presentation on Tailwind CSS at a company-wide tech meetup.",
-        "Actively developing an in-house component library that utilizes our company design system.",
-        "Meet shifting business needs by moving teams as needed and quickly adapting to their differing tech stacks.",
-        "Collaborate closely with product and design teams to ensure business needs and stakeholder asks are accurately translated into useful applications.",
-        "Coordinate with other teams and business units to bring valuable experiences to users."
+        "Guided product design decision-making when product team lacked design presence."
       ]
     },
     {
@@ -48,26 +59,12 @@
       "position": "Software Engineer",
       "startDate": "2018-08",
       "endDate": "2020-09",
-      "location": "Pittsburgh, PA",
       "url": "https://www.tobiidynavox.com/",
       "highlights": [
-        "Developed line-of-business applications and system integrations.",
         "Improved development processes by encouraging and implementing best practices in project management, change management, documentation, and TDD.",
         "Built an automated order processor that saved one team forty hours of work every week by leveraging automated PDF generation and synchronizing data across multiple systems.",
         "Created an application that helped internal users send personalized text messages to customers using the Twilio and Microsoft Graph APIs.",
         "Designed and implemented the first version of an in-house customer management system."
-      ]
-    },
-    {
-      "name": "VTR",
-      "position": "Software Developer",
-      "startDate": "2017-01",
-      "endDate": "2018-02",
-      "location": "Shawnee, OK",
-      "url": "https://vtrpro.com",
-      "highlights": [
-        "Developed an LMS platform for professionals in various fields seeking continuous education credits.",
-        "Overhauled the product branding strategy, which included commissioning a new logo and implementing a design system."
       ]
     }
   ],
@@ -77,15 +74,19 @@
     { "name": "React" },
     { "name": "HTML" },
     { "name": "CSS" },
-    { "name": "Test Driven Development" },
-    { "name": "Pair Programming" },
     { "name": "Design Systems" },
+    { "name": "Kotlin" },
+    { "name": "Spring" },
     { "name": "C#" },
     { "name": ".NET" },
-    { "name": "Kotlin" },
-    { "name": "Spring Boot" },
+    { "name": "Test Driven Development" },
+    { "name": "Pair Programming" },
     { "name": "Git" },
-    { "name": "SQL" }
+    { "name": "SQL" },
+    { "name": "Redis" },
+    { "name": "Kafka" },
+    { "name": "Azure" },
+    { "name": "Tanzu" }
   ],
   "education": [
     {
