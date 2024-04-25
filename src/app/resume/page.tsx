@@ -1,211 +1,317 @@
-import { format, parseISO } from 'date-fns'
 import Link from 'next/link'
-import resume from '~/resume.json'
-import { HomeIcon, EnvelopeIcon, PhoneIcon } from '@heroicons/react/24/outline'
 import {
-  BuildingOfficeIcon,
-  CalendarDaysIcon,
-  ArrowDownTrayIcon,
-  ChevronRightIcon,
+  DevicePhoneMobileIcon,
+  MapPinIcon,
+  GlobeAltIcon,
+  AtSymbolIcon,
 } from '@heroicons/react/16/solid'
-import { NetworkIcon } from '~/components/network-icon'
-import { MobileResume } from '~/components/mobile-resume'
+
 import { Metadata } from 'next'
+import { SiGithub, SiLinkedin } from '@icons-pack/react-simple-icons'
 
 export const metadata: Metadata = {
   title: 'Resume | Edward Sanders',
 }
 
 export default function Resume() {
-  const { basics, skills, work, education } = resume
-
   return (
-    <>
-      <div className="sm:hidden print:hidden">
-        <MobileResume />
-      </div>
-      <div className="hidden px-4 max-w-5xl mx-auto -serif sm:block print:px-0 print:block">
-        <header className="relative text-center my-4 print:mt-0 print:mb-2">
-          <h1 className="text-4xl print:text-3xl mb-2 print:mb-1">
-            {basics.name}
-          </h1>
-          <h2 className="text-xl print:text-lg">{basics.label}</h2>
-          <div className="absolute right-0 top-0 h-full flex items-center space-x-4 print:hidden">
-            <Link
-              download
-              target="_blank"
-              href="/edward-sanders-resume.pdf"
-              className="border-2 border-black flex p-1.5 rounded-md focus:outline-none focus-visible:outline-black active:text-gray-800 active:border-gray-800"
-              style={{ WebkitTapHighlightColor: 'transparent' }}
-            >
-              <span>Download Resume</span>
-              <ArrowDownTrayIcon className="ml-2 h-6 w-6 text-black not-sr-only" />
-            </Link>
+    <article className="max-w-screen-lg mx-auto px-4 text-gray-900 my-8 print:my-0">
+      <header className="flex flex-row justify-between">
+        <h1 className="font flex items-end text-5xl print:text-4xl">
+          Edward Sanders
+        </h1>
+        <address className="grid grid-rows-2 grid-flow-col gap-x-6 gap-y-1 text-sm print:text-xs">
+          <div className="flex flex-row items-center">
+            <AtSymbolIcon aria-hidden className="h-4 w-4 mr-2" />
+            <Link href="mailto:esanders@hey.com">esanders@hey.com</Link>
           </div>
-        </header>
-        <div className="flex border-t border-black divide-x divide-black">
-          <section className="py-4 pr-4 print:w-3/4">
-            <h2 className="text-xl font-semibold mb-2 print:text-base">
-              Professional Summary
-            </h2>
-            <p className=" print:text-xs">{basics.summary}</p>
-          </section>
-          <section className="w-3/4 py-4 pl-4 print:w-1/4">
-            <h2 className="text-xl font-semibold mb-2 print:text-base">
-              Contact Information
-            </h2>
-            <div className=" space-y-1 print:text-xs">
-              <div className="flex items-center">
-                <EnvelopeIcon className="not-sr-only mr-2 h-4 w-4 text-black" />
-                <Link
-                  target="_blank"
-                  href={`mailto:${basics.email}`}
-                  className="not-italic underline print:no-underline focus:outline-none focus-visible:outline-black"
-                >
-                  {basics.email}
-                </Link>
+          <div className="flex flex-row items-center">
+            <DevicePhoneMobileIcon aria-hidden className="h-4 w-4 mr-2" />
+            <Link href="tel:(405) 243-7303">(405) 243-7303</Link>
+          </div>
+          <div className="flex flex-row items-center">
+            <MapPinIcon aria-hidden className="h-4 w-4 mr-2" />
+            <div>Pittsburgh, PA</div>
+          </div>
+          <div className="flex flex-row items-center print:hidden">
+            <GlobeAltIcon aria-hidden className="h-4 w-4 mr-2" />
+            <Link href="https://esanders.dev">esanders.dev</Link>
+          </div>
+          <div className="flex flex-row items-center">
+            <SiGithub aria-hidden className="h-4 w-4 mr-2" />
+            <Link href="">itsthekeming</Link>
+          </div>
+          <div className="flex flex-row items-center print:hidden">
+            <SiLinkedin aria-hidden className="h-4 w-4 mr-2" />
+            <Link href="">esanders1994</Link>
+          </div>
+        </address>
+      </header>
+      <hr className="mb-4 mt-1 border-gray-900" />
+      <section>
+        <h2 className="font-bold text-2xl print:text-xl uppercase">
+          Work Experience
+        </h2>
+        <hr className="my-1 border-gray-900" />
+        <ul className="space-y-4 mt-2">
+          <li className="mt-2">
+            <div className="flex flex-row justify-between font-semibold text-xl print:text-lg">
+              <h3 className="uppercase">Dick&apos;s Sporting Goods</h3>
+              <div>
+                <time dateTime="2020-09">September 2020</time>
+                <span> - </span>
+                <span>present</span>
               </div>
-              <div className="flex items-center">
-                <PhoneIcon className="not-sr-only mr-2 h-4 w-4 text-black" />
-                <Link
-                  href={`tel:${basics.phone}`}
-                  className="not-italic underline print:no-underline focus:outline-none focus-visible:outline-black"
-                >
-                  {basics.phone}
-                </Link>
-              </div>
-              <div className="flex items-center">
-                <HomeIcon className="not-sr-only mr-2 h-4 w-4 text-black" />
-                <Link
-                  target="_blank"
-                  href={basics.url}
-                  className="block not-italic underline print:no-underline focus:outline-none focus-visible:outline-black"
-                >
-                  {basics.url}
-                </Link>
-              </div>
-              {basics.profiles?.map((profile) => (
-                <div key={profile.url} className="flex items-center">
-                  <NetworkIcon network={profile.network} />
-                  <span className="sr-only">{profile.network}:</span>
-                  <Link
-                    target="_blank"
-                    href={profile.url}
-                    className="block not-italic underline print:no-underline focus:outline-none focus-visible:outline-black"
-                  >
-                    {profile.username}
-                  </Link>
-                </div>
-              ))}
             </div>
-          </section>
-        </div>
-        <div className="flex-1 flex border-t border-black divide-x divide-black">
-          <div className="w-1/4 flex flex-col divide-y divide-black">
-            <section className="py-4 pr-4">
-              <h2 className="text-xl font-semibold mb-2 print:text-base">
-                Skills
-              </h2>
-              <ul className=" space-y-1 print:text-xs">
-                {skills.map((skill) => (
-                  <li key={skill.name}>{skill.name}</li>
-                ))}
-              </ul>
-            </section>
-            <section className="flex flex-col h-full py-4 pr-4">
-              <div className="flex-grow h-full">
-                <h2 className="text-xl font-semibold mb-2 print:text-base">
-                  Education
-                </h2>
-                <ul className=" space-y-4">
-                  {education.map((entry) => (
-                    <li key={entry.institution} className="print:text-xs">
-                      <h3>{entry.institution}</h3>
-                      <p className="italic">{entry.area}</p>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </section>
-          </div>
-          <section className="w-3/4 py-4 pl-4">
-            <h2 className="text-xl font-semibold mb-2 print:text-base">
-              Work History
-            </h2>
-            <ul className=" space-y-4">
-              {work.map((entry) => (
-                <li key={entry.name}>
-                  <h3 className="text-lg font-bold mb-1 print:text-sm">
-                    {entry.position}
-                  </h3>
-                  <div className="flex flex-col space-y-1 mb-1 italic md:flex-row md:space-x-4 md:space-y-0 print:text-xs print:flex-row print:space-y-0 print:space-x-4">
-                    <div className="flex items-center">
-                      <BuildingOfficeIcon className="not-sr-only mr-2 h-4 w-4 text-black" />
-                      <Link
-                        target="_blank"
-                        href={entry.url}
-                        className="inline underline print:no-underline focus:outline-none focus-visible:outline-black"
-                      >
-                        {entry.name}
-                      </Link>
-                    </div>
-                    <div className="flex items-center">
-                      <CalendarDaysIcon className="not-sr-only mr-2 h-4 w-4 text-black" />
-                      <p>
-                        <time dateTime={entry.startDate}>
-                          {format(parseISO(entry.startDate), 'MMMM y')}
-                        </time>
-                        <span className="not-sr-only"> - </span>
-                        <span className="sr-only">to </span>
-                        {entry.endDate ? (
-                          <time dateTime={entry.endDate}>
-                            {format(parseISO(entry.endDate), 'MMMM y')}
-                          </time>
-                        ) : (
-                          'today'
-                        )}
-                      </p>
+            <ul className="space-y-2">
+              <li>
+                <div className="flex flex-row text-base print:text-sm italic justify-between font-medium">
+                  <div className="flex flex-row space-x-2">
+                    <h4>Senior Software Engineer</h4>
+                    <span className="not-italic"> | </span>
+                    <div>
+                      <time dateTime="2023-01">January 2023</time>
+                      <span> - </span>
+                      <span>present</span>
                     </div>
                   </div>
-                  <ul className="space-y-1 print:text-xs">
-                    {entry.highlights?.map((highlight) => (
-                      <li key={highlight} className="flex flex-row">
-                        <div className="h-6 flex justify-center items-center print:h-4">
-                          <ChevronRightIcon className="not-sr-only mr-1 h-4 w-4 text-black" />
-                        </div>
-                        <div className="">{highlight}</div>
-                      </li>
-                    ))}
-                  </ul>
+                  <div>Remote</div>
+                </div>
+                <ul className="list-disc list-inside text-sm print:text-xs">
+                  <li>
+                    Develop and maintain a custom appointment booking system
+                    active in nearly 300 stores with 85k monthly active users
+                    and 45k monthly booked appointments.
+                  </li>
+                  <li>
+                    Recognized as the Store Technology All-Star in Q4 2023 for
+                    contributions to Front-end Excellence and Design Systems.
+                  </li>
+                  <li>
+                    Serve as the champion for the Store Technology Front-end
+                    Excellence group, guiding projects like the Stores Design
+                    System, Seamless Teammate Authentication, and front-end
+                    standards and best practices documentation.
+                  </li>
+                  <li>Won Second Place in the 2023 DSG Tech Hackathon.</li>
+                  <li>
+                    Serve as a leader on my product team by interfacing with
+                    stakeholders and business partners, organizing and guiding
+                    technical discussions, reviewing code changes, managing the
+                    SDLC, participating in on-call rotations, mentoring and
+                    teaching junior engineers, and identifying and implementing
+                    standards and best practices.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <div className="flex flex-row text-base print:text-sm italic justify-between font-medium">
+                  <div className="flex flex-row space-x-2">
+                    <h4>Software Engineer II</h4>
+                    <span className="not-italic"> | </span>
+                    <div>
+                      <time dateTime="2020-09">September 2020</time>
+                      <span> - </span>
+                      <time dateTime="2023-01">January 2023</time>
+                    </div>
+                  </div>
+                </div>
+                <ul className="list-inside list-disc text-sm print:text-xs">
+                  <li>
+                    Prior to my promotion to Senior Software Engineer, the scope
+                    of my duties was similar but narrower.
+                  </li>
+                  <li>
+                    Gave a organization-wide presentation on Tailwind CSS and
+                    how it can speed up development iteration.
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <div className="flex flex-row justify-between font-semibold text-xl print:text-lg">
+              <h3 className="uppercase">Tobii Dynavox</h3>
+              <div>
+                <time dateTime="2018-08">August 2018</time>
+                <span> - </span>
+                <time dateTime="2020-09">September 2020</time>
+              </div>
+            </div>
+            <div className="flex flex-row text-base print:text-sm italic justify-between font-medium">
+              <h4>Software Engineer</h4>
+              <div>Remote; Pittsburgh, PA</div>
+            </div>
+            <ul className="list-inside list-disc text-sm print:text-xs">
+              <li>
+                Tobii Dynavox makes assistive technology for communication (
+                <Link
+                  href="https://tobiidynavox.com"
+                  className="print:no-underline underline"
+                >
+                  tobiidynavox.com
+                </Link>
+                ).
+              </li>
+              <li>
+                As a Software Engineer, I developed applications to support our
+                internal operations, including medical funding, billing, and
+                customer service processes.
+                <ul className="ml-6 list-disc list-inside">
+                  <li>
+                    Developed an automated device reset process that saved the
+                    customer service team forty hours of work every week.
+                  </li>
+                  <li>
+                    Leveraged Twilio to build functionality which enabled the
+                    billing team to send personalized messages to customers.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                Introduced modern technologies to our tech stack, including
+                React, Tailwind CSS, and .NET Core.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <div className="flex flex-row justify-between font-semibold text-xl print:text-lg">
+              <h3>VTR Solutions</h3>
+              <div>
+                <time dateTime="2017-01">January 2017</time>
+                <span> - </span>
+                <time dateTime="2018-01">January 2018</time>
+              </div>
+            </div>
+            <div className="flex flex-row text-base print:text-sm italic justify-between font-medium">
+              <h4>Software Developer</h4>
+              <div>Shawnee, OK</div>
+            </div>
+            <ul className="list-inside list-disc text-sm print:text-xs">
+              <li>
+                VTR Solutions builds learning management software catered to
+                professionals seeking continuing education credits in various
+                fields, including HR and accounting (
+                <Link
+                  href="https://vtrpro.com"
+                  className="print:no-underline underline"
+                >
+                  vtrpro.com
+                </Link>
+                ).
+              </li>
+              <li>
+                Built out basic brand guidelines and a design system for the
+                product.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section className="mt-4">
+        <h2 className="font-bold text-2xl print:text-xl uppercase">
+          Education
+        </h2>
+        <hr className="my-1 border-gray-900" />
+        <ul className="space-y-4">
+          <li>
+            <div className="flex flex-row justify-between font-semibold text-xl print:text-lg">
+              <h3>University of Illinois Springfield</h3>
+              <p>Fall 2020 - Spring 2021</p>
+            </div>
+            <div className="flex flex-row text-base print:text-sm italic justify-between font-medium">
+              <p>Computer Science</p>
+              <p>Remote</p>
+            </div>
+          </li>
+          <li>
+            <div className="flex flex-row justify-between font-semibold text-xl print:text-lg">
+              <h3>Oklahoma Baptist University</h3>
+              <p>Fall 2014 - Spring 2017</p>
+            </div>
+            <div className="flex flex-row text-base print:text-sm italic justify-between font-medium">
+              <p>Computer Science; Religion; Political Science;</p>
+              <p>Shawnee, OK</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section className="mt-4">
+        <h2 className="font-bold text-2xl print:text-xl uppercase">
+          Skills & Interests
+        </h2>
+        <hr className="my-1 border-gray-900" />
+        <ul className="list-inside list-disc text-sm print:text-xs">
+          <li className="">
+            <h3 className="inline font-bold">Skills:&nbsp;</h3>
+            <ul className="inline">
+              {[
+                'JavaScript; ',
+                'TypeScript; ',
+                'React; ',
+                'Redux; ',
+                'CSS; ',
+                'Tailwind CSS; ',
+                'Cypress; ',
+                'React Native; ',
+                'Spring Framework; ',
+                'Java; ',
+                'Kotlin; ',
+                '.NET; ',
+                'ASP.NET; ',
+                'C#; ',
+                'OpenAPI; ',
+                'PostgreSQL; ',
+                'Redis; ',
+                'Apache Kafka; ',
+                'VMware Tanzu; ',
+                'Microsoft Azure; ',
+                'Docker; ',
+                'Akamai; ',
+                'Git; ',
+                'Jira; ',
+                'Confluence; ',
+                'GitHub Actions; ',
+                'CI/CD; ',
+                'Elastic Stack; ',
+                'Grafana; ',
+                'Kibana; ',
+                'Instana; ',
+                'Prometheus; ',
+                'Figma; ',
+                'project management; ',
+                'SDLC management; ',
+                'pair programming; ',
+                'unit testing; ',
+                'test driven development',
+              ].map((skill) => (
+                <li key={skill} className="inline">
+                  {skill}
                 </li>
               ))}
             </ul>
-            <aside className="mt-14 print:mt-6">
-              <p className="text-gray-400 italic text-[0.5rem] hidden not-sr-only print:block">
-                Check out the source code for this resume at{' '}
-                <Link
-                  target="_blank"
-                  className="underline"
-                  href="https://github.com/itsthekeming/itsthekeming.github.io/blob/main/src/app/resume/page.tsx"
-                >
-                  https://github.com/itsthekeming/itsthekeming.github.io/blob/main/src/app/resume/page.tsx
-                </Link>
-              </p>
-              <p className="text-gray-400 text-xs italic print:text-[0.5rem] print:hidden">
-                Check out the{' '}
-                <Link
-                  target="_blank"
-                  href="https://github.com/itsthekeming/itsthekeming.github.io/blob/main/src/app/resume/page.tsx"
-                  className="underline"
-                >
-                  source code
-                </Link>{' '}
-                for this resume!
-              </p>
-            </aside>
-          </section>
-        </div>
-      </div>
-    </>
+          </li>
+          <li>
+            <h3 className="inline font-bold">Interests:&nbsp;</h3>
+            <ul className="inline">
+              {[
+                'running; ',
+                'hiking; ',
+                'reading; ',
+                'cooking; ',
+                'video games; ',
+                'TTRPGs; ',
+                'LEGO; ',
+                '3D graphics',
+              ].map((interest) => (
+                <li key={interest} className="inline">
+                  {interest}
+                </li>
+              ))}
+            </ul>
+          </li>
+        </ul>
+      </section>
+    </article>
   )
 }

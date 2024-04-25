@@ -1,8 +1,8 @@
 import { PropsWithChildren } from 'react'
-import { Noto_Sans } from 'next/font/google'
+import { Inter } from 'next/font/google'
 import '~/styles/globals.css'
 
-const notoSans = Noto_Sans({
+const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
 })
@@ -10,7 +10,7 @@ const notoSans = Noto_Sans({
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang="en">
-      <body className={notoSans.className}>
+      <body className={inter.className}>
         <main>{children}</main>
       </body>
     </html>
